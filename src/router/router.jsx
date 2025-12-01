@@ -3,7 +3,7 @@ import RootLayout from "../Layouts/RootLayout/RootLayout";
 import Home from "../pages/Home";
 // import DashboardLayout from "../Layouts/DashboardLayout/DashboardLayout";
 import Login from "../pages/Login";
-// import SignUp from "../pages/SignUp";
+import SignUp from "../pages/SignUp";
 // import ForgotPassword from "../pages/ForgetPassword";
 // import Profile from "../pages/dashboard/Profile";
 // import PrivateRoute from "./PrivateRoute";
@@ -51,10 +51,10 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login />,
       },
-      // {
-      //   path: "/register",
-      //   element: <SignUp />,
-      // },
+      {
+        path: "/register",
+        element: <SignUp />,
+      },
       // {
       //   path: "/package/:id",
       //   element: <PackageDetails />,
