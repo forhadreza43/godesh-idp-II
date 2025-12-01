@@ -21,7 +21,7 @@ import SignUp from "../pages/SignUp";
 // import ManageAdminProfile from "../pages/dashboard/Admin/ManageAdminProfile";
 // import ApplicationDetails from "../pages/dashboard/Admin/ApplicationDetails";
 // import GuideProfile from "../pages/dashboard/Guide/GuideProfile";
-// import PackageDetails from "../pages/PackageDetails";
+import PackageDetails from "../pages/PackageDetails";
 import AllPackages from "../pages/AllPackages";
 // import GuideDetails from "../pages/GuideDetails";
 // import Payment from "../pages/dashboard/Payment/Payment";
@@ -55,10 +55,10 @@ const router = createBrowserRouter([
         path: "/register",
         element: <SignUp />,
       },
-      // {
-      //   path: "/package/:id",
-      //   element: <PackageDetails />,
-      // },
+      {
+        path: "/package/:id",
+        element: <PackageDetails />,
+      },
       // {
       //   path: "/guide/:id",
       //   element: <GuideDetails />,

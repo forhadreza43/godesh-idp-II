@@ -10,7 +10,7 @@ const RandomPackages = () => {
   const { data: packages = [], isLoading } = useQuery({
     queryKey: ["random-packages"],
     queryFn: async () => {
-      const res = await axiosSecure.get("/random-packages");
+      const res = await axiosSecure.get("/packages/random-packages");
       return res.data;
     },
   });
