@@ -24,9 +24,9 @@ import UpdateStory from "../pages/dashboard/Tourist/UpdateStory";
 import PackageDetails from "../pages/PackageDetails";
 import AllPackages from "../pages/AllPackages";
 import GuideDetails from "../pages/GuideDetails";
-// import Payment from "../pages/dashboard/Payment/Payment";
-// import { Elements } from "@stripe/react-stripe-js";
-// // import { loadStripe } from "@stripe/stripe-js";
+import Payment from "../pages/dashboard/Payment/Payment";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
 // import MyAssignedTours from "../pages/dashboard/Guide/MyAssignedTours";
 import AllStories from "../pages/AllStories";
 // import AboutUs from "../pages/AboutUs";
@@ -36,7 +36,7 @@ import RoleBasedRoute from "./RoleBasedRoute";
 // import Offer from "../pages/Offer";
 import NotFound from "../pages/NotFound";
 
-// const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PK);
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PK);
 
 const router = createBrowserRouter([
   {
@@ -207,16 +207,16 @@ const router = createBrowserRouter([
       },
 
   //     // Shared route (Tourist → Pay for booking)
-  //     {
-  //       path: "payment/:bookingId",
-  //       element: (
-  //         <RoleBasedRoute allowedRoles={["tourist"]}>
-  //           <Elements stripe={stripePromise}>
-  //             <Payment />
-  //           </Elements>
-  //         </RoleBasedRoute>
-  //       ),
-  //     },
+      {
+        path: "payment/:bookingId",
+        element: (
+          <RoleBasedRoute allowedRoles={["tourist"]}>
+            <Elements stripe={stripePromise}>
+              <Payment />
+            </Elements>
+          </RoleBasedRoute>
+        ),
+      },
 
   //     //guide route
   //     {
